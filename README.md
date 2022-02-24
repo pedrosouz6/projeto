@@ -1,4 +1,1 @@
-# LandPage(responsiva)
-
-<img src="img.png" />
-
+### Implementar o banco de dados no projeto - 24/02
