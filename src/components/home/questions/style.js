@@ -3,15 +3,15 @@ import Style from "styled-components";
 import { Styles } from "../../../styles/styles";
 
 const {
-    background_primary,
-    background_secondary,
-    font_color
-} = Styles
+    background_power,
+    background_normal,
+    text
+} = Styles.default
 
 export const Section = Style.section `
     width: 100%;
     height: auto;
-    background-color: ${font_color};
+    background-color: ${text};
     padding: 5rem 0;
 
     .container {
@@ -22,21 +22,21 @@ export const Section = Style.section `
 
     h2 {
         text-align: center;
-        color: ${background_primary};
+        color: ${background_power};
         margin-bottom: 2rem;
     }
-
 
     article {
         margin-bottom: 1rem;
     }
 
     article label {
-        background: linear-gradient(90deg, ${background_primary} 0%, ${background_secondary} 48%, ${background_primary} 100%);
+        background: linear-gradient(90deg, ${background_power} 0%, ${background_normal} 48%, ${background_power} 100%);
         display: block;
         padding: 15px 10px;
         cursor: pointer;
         position: relative;
+        color: ${text};
     }
 
     article label::after {
@@ -45,6 +45,7 @@ export const Section = Style.section `
         top: 50%;
         right: 15px;
         transform: translateY(-50%);
+        color: ${text};
         font-size: 18pt;
     }
 
@@ -60,7 +61,7 @@ export const Section = Style.section `
     article p {
         height: 0;
         overflow: hidden;
-        color: ${background_primary};
+        color: ${background_power};
         transition: .3s ease-in-out;
         
     }
@@ -68,7 +69,7 @@ export const Section = Style.section `
     article.active p {
         height: 80px;
         padding: 10px;
-        border: 1px solid ${background_primary};
+        border: 1px solid ${background_power};
         border-radius: 0 0 10px 10px;
     }
 `

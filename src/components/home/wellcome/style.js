@@ -2,23 +2,23 @@ import Style from "styled-components";
 
 import { Styles } from "../../../styles/styles";
 
-const { 
-    background_primary,
-    background_secondary,
-    height_header,
- } = Styles;
+const {
+    text,
+    background_power,
+    background_normal
+} = Styles.default;
 
 export const Section = Style.section `
     width: 100%;
     min-height: 110vh;
     max-height: auto;
-    background: linear-gradient(90deg, ${background_primary} 0%, ${background_secondary} 48%, ${background_primary} 100%);
+    background: linear-gradient(90deg, ${background_power} 0%, ${background_normal} 48%, ${background_power} 100%);
     padding-top: 60px;
     z-index: 10;
 
     .container {
         width: 100%;
-        height: calc(100vh - ${height_header});
+        height: calc(100vh - 70px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,13 +33,14 @@ export const Section = Style.section `
     .message h1{
         font-size: 30pt;
         font-weight: 600;
+        color: ${text}; 
     }
     
     .message button {
         margin-top: 1.5rem;
         padding: 10px 30px;
         background-color: white;
-        color: ${background_primary};
+        color: ${background_power};
         font-size: 12pt;
         font-weight: 600;
         letter-spacing: .5px;

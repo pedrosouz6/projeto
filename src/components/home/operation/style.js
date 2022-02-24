@@ -4,8 +4,8 @@ import { Styles } from "../../../styles/styles";
 const {
     text,
     background_power,
-    background_normal
-} = Styles;
+    background_normal,
+} = Styles.default;
 
 export const Section = Style.section `
     width: 100%;
@@ -49,6 +49,7 @@ export const Section = Style.section `
         background: linear-gradient(90deg, ${background_power} 0%, ${background_normal} 78%, ${background_power} 100%);
         margin-top: 1.5rem;
         cursor: pointer;
+        color: ${text};
     }  
 
 `
