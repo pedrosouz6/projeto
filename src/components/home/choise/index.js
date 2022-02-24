@@ -4,8 +4,11 @@ import { Section } from "./style";
 import { FcReadingEbook } from "react-icons/fc";
 import { FcShop } from "react-icons/fc";
 import { FcOk } from "react-icons/fc";
+import { useNavigate } from "react-router";
 
 export default function Choise() {
+
+    const navigate = useNavigate();
 
     return(
         <Section id="cadastrar">
@@ -23,7 +26,7 @@ export default function Choise() {
                             <li> <i><FcOk/></i> There are many variations of passages.</li>
                             <li> <i><FcOk/></i> There are many variations of passages.</li>
                             <li> <i><FcOk/></i> There are many variations of passages.</li>
-                            <button>Acessar</button>
+                            <button onClick={() => navigate("/cadastro-produtor")}>Acessar</button>
                         </ul>
                     </div>
 
@@ -38,7 +41,7 @@ export default function Choise() {
                             <li> <i><FcOk/></i> There are many variations of passages.</li>
                             <li> <i><FcOk/></i> There are many variations of passages.</li>
                             <li> <i><FcOk/></i> There are many variations of passages.</li>
-                            <button>Acessar</button>
+                            <button onClick={() => navigate("/cadastro-consumidor")}>Acessar</button>
                         </ul>
                     </div>
                 </div>
